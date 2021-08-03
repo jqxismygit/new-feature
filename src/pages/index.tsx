@@ -140,7 +140,7 @@ export default function IndexPage() {
         }
       } else if (mx > 0 && currentIdx === 1) {
         if (!down) {
-          const tweenOffset = { offset }; // Start at (0, 0)
+          const tweenOffset = { offset: 1 - offset }; // Start at (0, 0)
           if (offset > 0.5) {
             const tween = new TWEEN.Tween(tweenOffset) // Create a new tween that modifies 'coords'.
               .to({ offset: 0 }, 500) // Move to (300, 200) in 1 second.
